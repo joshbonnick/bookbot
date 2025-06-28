@@ -2,11 +2,9 @@ def get_book_content(file_path):
     with open(file_path) as f:
         return f.read()
 
-def get_word_count(file_path):
-    content = get_book_content(file_path)
+def get_word_count(content):
     word_count = len(content.split());
-    print(f"{word_count} words found in the document")
-
+    return word_count
 
 def get_char_count(content):
     character_map = {};
