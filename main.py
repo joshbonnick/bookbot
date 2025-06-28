@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
-def get_book_text(file_path):
-    with open(file_path) as f:
-        content = f.read()
-        print(content)
+from stats import get_word_count;
 
 def main():
-    get_book_text("./books/frankenstein.txt")
+    get_word_count("./books/frankenstein.txt")
 
 main()
