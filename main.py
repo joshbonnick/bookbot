@@ -2,10 +2,15 @@
 
 from stats import *
 
-def main():
-    content = get_book_content("./books/frankenstein.txt");    
-    get_word_count("./books/frankenstein.txt")
-    print(get_char_count(content))
-    
+def main(book_path):
+    content = get_book_content(book_path);    
+    word_count = get_word_count(content)
+    character_count = list(get_char_count(content)).sort(reverse=True, key=str.lower)
 
-main()
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book_path}")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+
+
+main("./books/frankenstein.txt")
