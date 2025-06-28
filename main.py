@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 from stats import *
 
 def main(book_path):
@@ -13,4 +14,4 @@ def main(book_path):
     print(f"Found {word_count} total words")
 
 
-main("./books/frankenstein.txt")
+main(sys.argv[1])
