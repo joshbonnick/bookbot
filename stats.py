@@ -15,3 +15,11 @@ def get_char_count(content):
         character_map[c] += 1;
 
     return character_map
+
+def get_sorted_char_count(count_dict):
+    chars = [];
+    for c in count_dict:
+        chars.append({"char": c, "num": count_dict[c]})
+
+    chars.sort(reverse=True, key=lambda c: c['num']);
+    return chars
